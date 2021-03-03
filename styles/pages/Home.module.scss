@@ -1,11 +1,124 @@
-@use '../variable/variable';
+@use '../variable/colors';
+@use '../variable/font-size';
 
 .container {
-  background-color: variable.$primaryColor;
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: colors.$primaryColor;
+  width: 100%;
+  min-width: 260px;
+  max-width: 1350px;
+  margin: 0 auto;
+  main {
+    section:nth-child(1) {
+      position: relative;
+      height: 40vh;
+      display: flex;
+      justify-content: center;
+      figure{
+        position: absolute;
+        bottom: 28%;
+        height: 50%;
+        width: 80%;
+        min-width: 150px;
+        max-width: 160px;
+        max-height: 200px;
+        margin:0;
+        img{
+          position: relative;
+          left: 10%;
+          width: 80%;
+          height: 100%;
+          z-index: 20;
+        }
+      }
+      h1{
+        position: relative;
+        font-size: font-size.$titleP;
+        text-align: center;
+        top: 70%;
+        color: yellow;
+        z-index: 19;
+        margin: 0;
+        width: 100%;
+        height: min-content;
+      }
+    }
+    section:nth-child(2){
+      position: relative;
+      height: 40vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > div {
+        position: relative;
+        width: 90%;
+        min-width: 220px;
+        height: 70%;
+        background-color: darkorange;
+        display: flex;
+        div:nth-child(2),
+        div:nth-child(4){
+          position: relative;
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 2px solid red;
+          h2{
+            position: relative;
+            font-size: font-size.$titleSecundaryP;
+            bottom: 0%;
+          }
+        }
+        div:nth-child(1),
+        div:nth-child(3){
+          position: absolute;
+          width: 5%;
+          height: 100%;
+          border: 2px solid yellow;
+          font-size: 10px;
+        }
+        div:nth-child(3){
+        right: 0;
+        }
+      }
+    }
+    section:nth-child(3){
+      height: 20vh;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      > div{
+        text-align: end;
+        width: 70%;
+        margin: 0 auto;
+        a{
+          text-decoration: underline;
+        }
+      }
+    }
+
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 767px){
+  .container{
+    main {
+      section:nth-child(1) {
+        figure{
+          min-width: 90px;
+          max-width: 160px;
+          bottom: 18%;
+          img{
+            position: relative;
+            left: 15%;
+            width: 70%;
+          }
+        }
+        h1{
+          top: 80%;
+        }
+      }
+    }
+  }
 }
