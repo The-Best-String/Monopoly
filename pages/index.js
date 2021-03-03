@@ -14,8 +14,8 @@ export default function Home() {
         <section>
           <figure>
             <img src="/images/hat_normal.png" alt="hat-monopoly"/>
-            <h1> In construction. . .</h1>
           </figure>
+            <h1> In construction. . .</h1>
         </section>
         <section>
           <div>
@@ -42,7 +42,11 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <a href="https://github.com/The-Best-String/Monopoly"> Github proyect</a>
+            <div>
+              <a href="https://github.com/The-Best-String/Monopoly" target="_blank">
+                Github proyect
+              </a>
+            </div>
         </section>
       </main>
       <footer>
