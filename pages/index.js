@@ -8,14 +8,13 @@ export default function Home() {
         <title>Monopoly</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-      </header>
       <main>
         <section>
-          <figure>
+          <picture>
+            <source media="(min-width: 769px)" srcSet="/images/hat_big.png"/>
             <img src="/images/hat_normal.png" alt="hat-monopoly"/>
-          </figure>
-            <h1> In construction. . .</h1>
+          </picture>
+          <h1> In construction. . .</h1>
         </section>
         <section>
           <div>
@@ -41,15 +40,13 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
-            <div>
-              <a href="https://github.com/The-Best-String/Monopoly" target="_blank">
-                Github proyect
-              </a>
-            </div>
-        </section>
       </main>
       <footer>
+          <div>
+            <a href="https://github.com/The-Best-String/Monopoly" target="_blank">
+              <img src="/icons/github_logo_white.png" alt="github_logo"/>
+            </a>
+          </div>
       </footer>
     </div>
   )
